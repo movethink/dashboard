@@ -10,13 +10,13 @@ lerna-debug.log*
 node_modules
 .DS_Store
 dist
+dist-electron
 dist-ssr
 coverage
 *.local
 
 /cypress/videos/
 /cypress/screenshots/
-/dist-electron/
 
 # Editor directories and files
 .vscode/*

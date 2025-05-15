@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView, useRoute } from 'vue-router'
-
-const route = useRoute()
-
-console.log(route, 'route')
+import { RouterView } from 'vue-router'
+import Menu from '@/views/Menu.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav class="nav">
-        <RouterLink to="/">画布</RouterLink>
-        <RouterLink to="/about">配置</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div class="common-layout">
+    <el-container>
+      <el-aside width="200px">
+        <Menu></Menu>
+      </el-aside>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-main><RouterView /></el-main>
+      </el-container>
+    </el-container>
+  </div>
 </template>
 
 <style lang="scss" scoped>
